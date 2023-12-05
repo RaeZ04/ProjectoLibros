@@ -28,7 +28,6 @@ public class Main {
 
                 System.out.print("Introduzca el ID: ");
                 int id = InputOutput.leerInt();
-                InputOutput.leerString();
 
                 System.out.print("Introduzca el titulo del libro: ");
                 String nombre = InputOutput.leerString();
@@ -51,7 +50,6 @@ public class Main {
 
                 System.out.print("Elige una opcion: ");
                 int eleccion2 = InputOutput.leerInt();
-                InputOutput.leerString();
 
                 if (eleccion2 == 1) {
 
@@ -64,6 +62,11 @@ public class Main {
 
                 if (eleccion2 == 2) {
 
+                    System.out.print("Introduce el autor: ");
+                    String autor = InputOutput.leerString();
+
+                    libreria.buscarautor(autor);
+
                 }
 
                 if (eleccion2 == 3) {
@@ -72,6 +75,12 @@ public class Main {
 
             }
 
-        } while (eleccion != 5);
+            if (eleccion == 3) {
+                
+                libreria.mostrarlibros();
+
+            }
+
+        } while (eleccion != 4);
     }
 }
