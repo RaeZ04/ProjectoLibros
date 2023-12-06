@@ -21,6 +21,7 @@ public class InputOutput {
                 return numero;
 
             } else {
+                
                 System.out.print("Por favor, ingrese un número válido: ");
                 input.nextLine();
 
