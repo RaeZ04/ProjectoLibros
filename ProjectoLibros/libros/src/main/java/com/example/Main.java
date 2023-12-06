@@ -45,65 +45,82 @@ public class Main {
 
             else if (eleccion == 2) {
 
+                int eleccion2;
+
+                do {
+
+                System.out.println("");
                 System.out.println("1. Buscar por título ");
                 System.out.println("2. Buscar por autor ");
                 System.out.println("3. Volver atrás");
 
                 System.out.print("Elige una opcion: ");
-                int eleccion2 = InputOutput.leerInt();
+                eleccion2 = InputOutput.leerInt();
 
-                if (eleccion2 == 1) {
+                
 
-                    System.out.print("Introduce el título: ");
-                    String titulo = InputOutput.leerString();
+                    if (eleccion2 == 1) {
 
-                    libreria.buscartitulo(titulo);
+                        System.out.print("Introduce el título: ");
+                        String titulo = InputOutput.leerString();
 
-                }
+                        libreria.buscartitulo(titulo);
 
-                if (eleccion2 == 2) {
+                    }
 
-                    System.out.print("Introduce el autor: ");
-                    String autor = InputOutput.leerString();
+                    else if (eleccion2 == 2) {
 
-                    libreria.buscarautor(autor);
+                        System.out.print("Introduce el autor: ");
+                        String autor = InputOutput.leerString();
 
-                }
+                        libreria.buscarautor(autor);
 
-                if (eleccion2 == 3) {
+                    }
 
-                }
+                    else if (eleccion2 == 3) {
+
+                    }
+
+                    else {
+
+                        System.out.println("");
+                        System.out.println("Has elegido una opción incorrecta, elige del 1-3.");
+                        System.out.println("");
+
+                    }
+
+                } while (eleccion2 != 3);
 
             }
 
             else if (eleccion == 3) {
-                
+
                 libreria.mostrarlibros();
 
             }
 
             else if (eleccion == 4) {
-                
+
                 System.out.print("Indica el ID del libro al que quieres añadir unidades: ");
                 int idbuscar = InputOutput.leerInt();
 
                 System.out.print("Indica cuantas unidades quieres añadir: ");
                 int unidadesañadidas = InputOutput.leerInt();
-                
+
                 libreria.sumarlibros(idbuscar, unidadesañadidas);
 
             }
 
-            else if (eleccion == 5){
+            else if (eleccion == 5) {
 
                 System.out.println("Has salido del programa.");
 
             }
-            
-            else{
+
+            else {
 
                 System.out.println("Opción no valida, elija del 1-4, o 5 para salir.");
-                
+
             }
 
         } while (eleccion != 5);
