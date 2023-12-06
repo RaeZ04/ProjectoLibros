@@ -8,6 +8,17 @@ public class libreria {
 
     public void agregarlibro(int id, String nombre, String autor, int unidades) {
 
+        for (libro existente : libros) {
+
+            if (existente.getId() == id) {
+
+                System.out.println("");
+                System.out.println("Ya existe un libro con este ID. No se puede agregar.");
+                return; 
+
+            }
+        }
+
         libro nuevoLibro = new libro(id, nombre, autor, unidades);
         libros.add(nuevoLibro);
         System.out.println("");
@@ -58,11 +69,33 @@ public class libreria {
 
     }
 
-    public void mostrarlibros(){
+    public void mostrarlibros() {
+
+        for (libro libro : libros) {
+
+            libro.mostrarInformacion();
+
+        }
+
+    }
+
+    public void sumarlibros(int idbuscar, int unidadedsañadidas){
 
         for (libro libro : libros){
 
-            libro.mostrarInformacion();
+            if (libro.getId() == idbuscar) {
+                
+                int unidadesnuevas = libro.getUnidades() + unidadedsañadidas;
+                libro.setUnidades(unidadesnuevas);
+
+                System.out.println("");
+                System.out.println("Has añadido " + unidadedsañadidas + " Unidades de " + libro.getNombre() + ", ahora hay " + unidadesnuevas + " Unidades.");
+
+            }else{
+
+                System.out.println("No se ha encontrado un libro con ese ID.");
+            
+            }
 
         }
 

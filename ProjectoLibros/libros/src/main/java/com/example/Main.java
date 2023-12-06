@@ -16,7 +16,8 @@ public class Main {
             System.out.println("1. Agregar Libro");
             System.out.println("2. Buscar un libro");
             System.out.println("3. Lista de libros");
-            System.out.println("4. Salir");
+            System.out.println("4. Añadir Unidades");
+            System.out.println("5. Salir");
             System.out.println("");
             System.out.print("Elige una opcion: ");
 
@@ -80,13 +81,31 @@ public class Main {
                 libreria.mostrarlibros();
 
             }
+
+            else if (eleccion == 4) {
+                
+                System.out.print("Indica el ID del libro al que quieres añadir unidades: ");
+                int idbuscar = InputOutput.leerInt();
+
+                System.out.print("Indica cuantas unidades quieres añadir: ");
+                int unidadesañadidas = InputOutput.leerInt();
+                
+                libreria.sumarlibros(idbuscar, unidadesañadidas);
+
+            }
+
+            else if (eleccion == 5){
+
+                System.out.println("Has salido del programa.");
+
+            }
             
             else{
 
-                System.out.println("Opción no valida, elija del 1-3, o 4 para salir.");
+                System.out.println("Opción no valida, elija del 1-4, o 5 para salir.");
                 
             }
 
-        } while (eleccion != 4);
+        } while (eleccion != 5);
     }
 }
