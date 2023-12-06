@@ -42,7 +42,7 @@ public class Main {
 
             }
 
-            if (eleccion == 2) {
+            else if (eleccion == 2) {
 
                 System.out.println("1. Buscar por título ");
                 System.out.println("2. Buscar por autor ");
@@ -75,10 +75,16 @@ public class Main {
 
             }
 
-            if (eleccion == 3) {
+            else if (eleccion == 3) {
                 
                 libreria.mostrarlibros();
 
+            }
+            
+            else{
+
+                System.out.println("Opción no valida, elija del 1-3, o 4 para salir.");
+                
             }
 
         } while (eleccion != 4);
