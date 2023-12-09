@@ -115,7 +115,7 @@ public class libreria {
         if (contador3 == 0) {
 
             System.out.println("");
-            System.out.println("No se ha encontrado un libro con ese ID.");
+            System.out.println("No se ha encontrado ningun libro con ese ID.");
 
         }
 

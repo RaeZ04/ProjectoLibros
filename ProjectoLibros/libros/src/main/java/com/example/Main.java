@@ -49,15 +49,13 @@ public class Main {
 
                 do {
 
-                System.out.println("");
-                System.out.println("1. Buscar por título ");
-                System.out.println("2. Buscar por autor ");
-                System.out.println("3. Volver atrás");
+                    System.out.println("");
+                    System.out.println("1. Buscar por título ");
+                    System.out.println("2. Buscar por autor ");
+                    System.out.println("3. Volver atrás");
 
-                System.out.print("Elige una opcion: ");
-                eleccion2 = InputOutput.leerInt();
-
-                
+                    System.out.print("Elige una opcion: ");
+                    eleccion2 = InputOutput.leerInt();
 
                     if (eleccion2 == 1) {
 
